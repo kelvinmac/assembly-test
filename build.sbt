@@ -8,11 +8,10 @@ scalaVersion := "2.13.6"
 lazy val globalApp = (project in file("."))
   .aggregate(app)
   .settings(
+    assembly / mainClass := Some("com.kelvin.assembly.Main")
   )
 
 
 lazy val app = (project in file("app"))
   .settings(
   )
-
-ThisBuild / assembly / mainClass := Some("com.kelvin.assembly.Main")
